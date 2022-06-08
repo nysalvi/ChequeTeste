@@ -32,7 +32,7 @@ namespace ChequeExtenso.ConsoleApp
             if (array[0] == '0')
                 return "";
             string num = array.Substring(0, 1);
-            array.Remove(0, 1);
+            array = array.Remove(0, 1);
             return Numeros[0][num];
         }
         private string CalculaResto1(ref string array)
@@ -51,12 +51,12 @@ namespace ChequeExtenso.ConsoleApp
             if (array[0] == '1')
             {
                 num = array.Substring(0, 2);
-                array.Remove(0, 2);
+                array = array.Remove(0, 2);
             }
             else
             {
                 num = array.Substring(0, 1);
-                array.Remove(0, 1);
+                array = array.Remove(0, 1);
             }
             return Numeros[2][num];
         }
@@ -133,18 +133,18 @@ namespace ChequeExtenso.ConsoleApp
             {"13", "treze"},
             {"14", "catorze"},
             {"15", "quinze"},
-            {"16", "dezesseis "},
-            {"17", "dezessete "},
-            {"18", "dezoito "},
+            {"16", "dezesseis"},
+            {"17", "dezessete"},
+            {"18", "dezoito"},
             {"19", "dezenove"} ,
-            {"2", "vinte "},
-            {"3", "trinta "},
-            {"4", "quarenta "},
+            {"2", "vinte"},
+            {"3", "trinta"},
+            {"4", "quarenta"},
             {"5", "cinquenta"},
-            {"6", "sessenta "},
-            {"7", "setenta "},
-            {"8", "oitenta "},
-            {"9", "noventa "},
+            {"6", "sessenta"},
+            {"7", "setenta"},
+            {"8", "oitenta"},
+            {"9", "noventa"},
         }
     };
     //static readonly Dictionary<string, string> centena = new Dictionary<string, string>()

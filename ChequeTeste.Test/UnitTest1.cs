@@ -26,24 +26,42 @@ namespace ChequeTeste.Test
             Assert.AreEqual(resul, numeroEscrito);            
         }
         [TestMethod]
-        public void Dezena()
+        [DataRow("10", "dez")]
+        [DataRow("11", "onze")]
+        [DataRow("12", "doze")]
+        [DataRow("13", "treze")]
+        [DataRow("14", "catorze")]
+        [DataRow("15", "quinze")]
+        [DataRow("16", "dezesseis")]
+        [DataRow("17", "dezessete")]
+        [DataRow("18", "dezoito")]
+        [DataRow("19", "dezenove")]
+        public void Dezena(string numero, string numeroEscrito)
         {
-
+            Cheque cheque = new Cheque(numero);
+            string resul = cheque.CalculaValor();
+            Assert.AreEqual(resul, numeroEscrito);
         }
         [TestMethod]
-        public void Centena()
+        public void Centena(string numero, string numeroEscrito)
         {
-
+            Cheque cheque = new Cheque(numero);
+            string resul = cheque.CalculaValor();
+            Assert.AreEqual(resul, numeroEscrito);
         }
         [TestMethod]
-        public void Milhar()
+        public void Milhar(string numero, string numeroEscrito)
         {
-
+            Cheque cheque = new Cheque(numero);
+            string resul = cheque.CalculaValor();
+            Assert.AreEqual(resul, numeroEscrito);
         }
         [TestMethod]
-        public void Milhao()
+        public void Milhao(string numero, string numeroEscrito)
         {
-
+            Cheque cheque = new Cheque(numero);
+            string resul = cheque.CalculaValor();
+            Assert.AreEqual(resul, numeroEscrito);
         }
     }
 }
