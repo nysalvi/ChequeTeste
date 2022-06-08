@@ -43,6 +43,14 @@ namespace ChequeTeste.Test
             Assert.AreEqual(resul, numeroEscrito);
         }
         [TestMethod]
+        [DataRow("100", "cem")]
+        [DataRow("243", "duzentosquarentatrês")]
+        [DataRow("339", "trezentostrintanove")]
+        [DataRow("012", "doze")]
+        [DataRow("008", "oito")]
+        [DataRow("600", "seiscentos")]
+        [DataRow("542", "quinhentosquarentadois")]
+        [DataRow("881", "oitocentosoitentaum")]
         public void Centena(string numero, string numeroEscrito)
         {
             Cheque cheque = new Cheque(numero);
@@ -50,6 +58,14 @@ namespace ChequeTeste.Test
             Assert.AreEqual(resul, numeroEscrito);
         }
         [TestMethod]
+        [DataRow("0100", "cem")]
+        [DataRow("0203", "duzentostrês")]
+        [DataRow("1039", "miltrintanove")]
+        [DataRow("012", "doze")]
+        [DataRow("008", "oito")]
+        [DataRow("600", "seiscentos")]
+        [DataRow("542", "quinhentosquarentadois")]
+        [DataRow("881", "oitocentosoitentaum")]
         public void Milhar(string numero, string numeroEscrito)
         {
             Cheque cheque = new Cheque(numero);

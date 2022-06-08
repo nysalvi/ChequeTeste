@@ -30,7 +30,10 @@ namespace ChequeExtenso.ConsoleApp
         private string CalculaResto0(ref string array)
         {
             if (array[0] == '0')
+            {
+                array = array.Remove(0, 1);
                 return "";
+            }
             string num = array.Substring(0, 1);
             array = array.Remove(0, 1);
             return Numeros[0][num];
@@ -38,7 +41,10 @@ namespace ChequeExtenso.ConsoleApp
         private string CalculaResto1(ref string array)
         {
             if (array[0] == '0')
+            {
+                array = array.Remove(0, 1);
                 return "";
+            }
             string num = array.Substring(0, 1);
             array = array.Remove(0, 1);
             return Numeros[1][num];            
@@ -46,7 +52,10 @@ namespace ChequeExtenso.ConsoleApp
         private string CalculaResto2(ref string array)
         {
             if (array[0] == '0')
+            {
+                array = array.Remove(0, 1);
                 return "";
+            }
             string num;
             if (array[0] == '1')
             {
@@ -103,14 +112,14 @@ namespace ChequeExtenso.ConsoleApp
         {
             new Dictionary<string, string>()
         {
-            {"1", "cem "},
+            {"1", "cem"},
             {"2", "duzentos"},
             {"3", "trezentos"},
             {"4", "quatrocentos"},
             {"5", "quinhentos"},
-            {"6", "seiscentos "},
-            {"7", "setecentos "},
-            {"8", "oitocentos "},
+            {"6", "seiscentos"},
+            {"7", "setecentos"},
+            {"8", "oitocentos"},
             {"9", "novecentos" }
         },
             new Dictionary<string, string>()
